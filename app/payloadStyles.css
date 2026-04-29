@@ -1,0 +1,8 @@
+/* Tailwind for Payload admin — no preflight to avoid conflicts with Payload's own styles */
+@layer theme, base, components, utilities;
+
+@import 'tailwindcss/theme.css' layer(theme);
+/* preflight intentionally skipped */
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
