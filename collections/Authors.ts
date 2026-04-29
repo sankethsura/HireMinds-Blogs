@@ -12,6 +12,21 @@ export const Authors: CollectionConfig = {
       required: true,
     },
     {
+      name: 'slug',
+      type: 'text',
+      unique: true,
+      admin: {
+        description: 'URL slug e.g. "jane-doe"',
+      },
+    },
+    {
+      name: 'role',
+      type: 'text',
+      admin: {
+        description: 'Job title / role e.g. "Head of Talent"',
+      },
+    },
+    {
       name: 'bio',
       type: 'textarea',
     },

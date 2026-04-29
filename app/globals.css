@@ -5,13 +5,56 @@
 
 @layer theme {
   :root {
-    --color-bg: rgb(255 255 255);
-    --color-fg: rgb(0 0 0);
+    /* Brand colors */
+    --brand-primary: #1a2744;
+    --brand-secondary: #2d5be3;
+    --brand-accent: #00c9a7;
+    --brand-warm: #f97316;
+
+    /* Surfaces */
+    --surface-bg: #ffffff;
+    --surface-card: #f8fafc;
+    --surface-elevated: #ffffff;
+    --surface-navy: #0f1d3a;
+
+    /* Text */
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --text-inverse: #ffffff;
+
+    /* Borders */
+    --border-default: #e2e8f0;
+    --border-subtle: #f1f5f9;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-hover: 0 10px 25px -5px rgb(0 0 0 / 0.15), 0 4px 10px -5px rgb(0 0 0 / 0.1);
+    --shadow-card: 0 2px 8px rgb(0 0 0 / 0.06);
+
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-base: 200ms ease;
+    --transition-slow: 300ms ease;
+
+    /* Fonts */
+    --font-heading: var(--font-bricolage), 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+    --font-body: var(--font-dm-sans), 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+
+    /* Legacy bg/fg */
+    --color-bg: #ffffff;
+    --color-fg: #0f172a;
   }
 
   [data-theme="dark"] {
     --color-bg: rgb(10 10 10);
     --color-fg: rgb(237 237 237);
+    --surface-bg: #0f172a;
+    --surface-card: #1e293b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --border-default: #334155;
   }
 }
 
@@ -21,16 +64,21 @@
   }
 
   html {
-    background-color: var(--color-bg);
-    color: var(--color-fg);
+    background-color: var(--surface-bg);
+    color: var(--text-primary);
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
     margin: 0;
     min-height: 100%;
-    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-family: var(--font-body);
     background-color: inherit;
     color: inherit;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
   }
 }
